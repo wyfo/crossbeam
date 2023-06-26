@@ -4,6 +4,7 @@ IFS=$'\n\t'
 cd "$(dirname "$0")"
 
 cargo run --release --bin crossbeam-channel | tee crossbeam-channel.txt
+cargo run --release --bin swap-buffer-queue | tee swap-buffer-queue.txt
 cargo run --release --bin futures-channel | tee futures-channel.txt
 cargo run --release --bin mpsc | tee mpsc.txt
 cargo run --release --bin flume | tee flume.txt
